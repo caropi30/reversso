@@ -4,16 +4,19 @@
 
 /*Base Folder*/
 @import 'base/typography';
+@import 'base/reset';
+
 
 
 /*Components Folder*/
 @import 'components/buttons';
 
 /*Layout Folder*/
-
+@import 'layout/desktop';
+@import 'layout/mobile';
 
 /*Pages Folder*/
-@import 'pages/loggin';
+@import 'pages/login';
 @import 'pages/signup';
 
 

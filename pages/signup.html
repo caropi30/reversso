@@ -15,75 +15,89 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap" rel="stylesheet">
         
-        <!--Style / Animate CSS / Bootstrap-->
+        <!--Style-->
         <link rel="stylesheet" type="text/css" href="../css/main.css">
 
         <!--Javascript-->
         <script defer src="../js/script.js"></script>
     </head>
     <body>
-        <main class="grid">
-            <section class="leftSide">
-                <div class="leftSide-Info">
-                    <div class="leftSide-Info--logo">
-                        <img src="../assets/img/logo/logo.svg" alt="Be Positive Logo">
+        <main>
+            <div class="desktop grid ">
+                <section class="leftSide">
+                    <div class="leftSide-Info">
+                        <div class="leftSide-Info--logo">
+                            <img src="../assets/img/logo/logo.svg" alt="Be Positive Logo">
+                        </div>
+                        <div class="leftSide-Info--text">
+                            <h1>Gestiona tus seguidores de forma segura</h1>
+                            <div class="smiling">
+                                <img src="../assets/img/logo/smiling.svg">
+                            </div>
+                        </div>
                     </div>
-                    <div class="leftSide-Info--text">
-                        <h1>Gestiona tus seguidores de forma segura</h1>
-                        <img src="../assets/img/logo/smiling.svg"
+                </section>
+                <section class="rightSide">
+                    <div class="login">
+                        <div class="login-Text">
+                            <h4>Registrase en be positive</h4>
+                        </div>
+    
+                        <form name=" "  method="post" enctype="multipart/form-data" class="login-Form">
+                            <div class="login-Form--inputs">
+                                <label>Email/ Nombre de usuario</label>
+                                <input type="text" id="mail" placeholder="Ingresa email o nombre de usuario">
+                            </div>
+                            <div class="login-Form--inputs">
+                                <label>Nombre</label>
+                                <input type="text" id="mail" placeholder="Nombre">
+                            </div>
+                            <div class="login-Form--inputs">
+                                <label>Contraseña</label>
+                                <input type="password" id ="password" placeholder="Ingresa contraseña">  
+                                <span><img src="../assets/img/icon/view-pass.svg"></span>
+                            </div>
+                        </form>
+                        <div class="login-Form--check">
+                            <input type="checkbox" class="checkbox">
+                            <span>
+                                <p>Aceptar términos y condiciones</p>
+                            </span>
+                        </div>
+                        <button type="button" >
+                            <a href="../pages/succes_login.html">Iniciar sesión</a>
+                        </button>
+                        <div class="login-RRSS">
+                            <p>O registrarse con otra cuenta</p>
+                            <div class="login-RRSS-icon">
+                                <div>
+                                    <a href="https://appleid.apple.com/">
+                                        <img src="../assets/img/rrss/apple.svg" alt="Apple Account"></img>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="https://es-la.facebook.com">
+                                        <img src="../assets/img/rrss/facebook.svg" alt="Facebook Account"></img>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="https://www.google.com/account/about/">
+                                        <img src="../assets/img/rrss/google.svg" alt="Google Account"></img>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="login-Singup">
+                            <p>¿Ya eres usuario?
+                                <a href="../index.html">Ingresar</a>
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </section>
-            <section class="rightSide">
-                <div clas="login">
-                    <div class="login-Text">
-                        <h3>Registrase en be positive</h3>
-                    </div>
+                </section>
+            </div>
+            <div class="mobile">
 
-                    <form name=" "  method="post" enctype="multipart/form-data" class="login-Form">
-                        <div>
-                            <label>Email/Nombre de usuario</label>
-                            <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Ingresa email o nombre de usuario">
-                        </div>
-                        <div>
-                            <label>Contraseña</label>
-                            <input type="password" placeholder="Ingresa contraseña">  
-                            <img src="../assets/img/icon/view-pass.svg">
-                        </div>
-                    </form>
-                    <div>
-                        <input type="checkbox">
-                        <p>Aceptar términos y condiciones</p>
-                    </div>
-                    <p>¿Olvidaste tu contraseña</p>
-                    <button type="button" >Iniciar sesión</button>
-                    <div class="login-RRSS">
-                        <p>O registrarse con otra cuenta</p>
-                        <div class="login-Form--rrss">
-                            <div>
-                                <a>
-                                    <img src="../assets/img/rrss/apple.svg" alt="Apple Account"></img>
-                                </a>
-                            </div>
-                            <div>
-                                <a>
-                                    <img src="../assets/img/rrss/facebook.svg" alt="Facebook Account"></img>
-                                </a>
-                            </div>
-                            <div>
-                                <a>
-                                    <img src="../assets/img/rrss/google.svg" alt="Google Account"></img>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <p>¿Ya eres un nuevo usuario?
-                        <span>
-                            <a href="../index.html">Ingresar</a>
-                        </span>
-                    </p>
-                </div>
-            </section>
+            </div>
         </main>
     </body>
 </html>

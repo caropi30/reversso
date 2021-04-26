@@ -2,6 +2,20 @@
     .grid{
         display: grid;
         grid-template-columns: repeat(2, 50%);
+        position: relative;
+    }
+
+    .successLogin {
+        width: 100%;
+        background-color: $Dumbledore;
+        position: absolute;
+        padding: 1rem 0;
+
+        h4 {
+            color: $Dobby;
+            font-weight: $light;
+            text-align: center;
+        }
     }
 }
 
@@ -14,7 +28,7 @@
 @mixin desktop-leftSide{
     .leftSide {
         background-color: $Luna;
-        height: 100%vw;
+        min-height: 100vw;
 
         &-Info {
             display: flex;
@@ -22,7 +36,7 @@
             color: $Harry;
             font-size: $small;
             font-weight: $light;
-            padding: 5rem 15rem 30rem 5rem;
+            padding: 5rem 15rem 0 5rem;
 
             &--logo {
                 width: 220px;
@@ -36,10 +50,17 @@
                 display: flex;
                 flex-direction: column;
                 padding: 2rem 0 0 .5rem;
-                
-                img {
-                    align-self: flex-end;
-                    width: 100px;
+                position: relative;
+
+                .smiling {
+                    position: absolute;
+                    top: 80%;
+                    left: 66%;
+                    width: 120px;
+
+                    img {
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -47,62 +68,161 @@
 }
 
 @mixin desktop-rightSide {
-    .rightSide {
-        .login {
-            position: relative;
-            top: 20%;
-            left: 30%;
-            width: 400px;
+    .login {
+        position: relative;
+        top: 10%;
+        left: 30%;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        height: 100vw;
+
+        &-Text {
+            color: $Hermione;
+            
+            h3 {
+                font-size: $small;
+            }
+
+            h4 {
+                font-size: 1.5rem;
+                padding-bottom: 1.5rem;
+            }
+
+            &--orange {
+                padding: 1rem 0 2rem 0;
+            }
+
+        }
+
+        &-Form {
             display: flex;
             flex-direction: column;
-            &-Text {
-                color: $Hermione;
-                
-                h3 {
-                    font-size: $small;
-                }
-
-                p {
-                    padding: 1rem 0 2rem 0;
-                }
-
-            }
-
-            &-Form {
+            &--inputs {
                 display: flex;
                 flex-direction: column;
-                &--inputs {
-                    display: flex;
-                    flex-direction: column;
-                    padding-bottom: 2rem;
+                padding-bottom: 1.5rem;
+                position: relative;
 
-                    label {
+                label {
+                    color: $Harry;
+                    padding-bottom: 1rem;
+                }
+                input {
+                    padding: 1rem 0 1.2rem 1rem;
+                    width: auto;
+                    border: 1px solid $Voldemort;
+                    border-radius: 5px;
+                }
+
+                input:hover{
+                    color: $Harry;
+                }
+
+                span {
+                    position: absolute;
+                    top: 43%;
+                    left: 88%;
+
+                    img:hover {
                         color: $Harry;
-                        padding-bottom: 1rem;
-                    }
-                    input {
-                        padding: 1rem 0 1.5rem 1rem;
-                        width: auto;
-                        border: 1px solid $Voldemort;
-                        border-radius: 5px;
-                    }
-
-                    input:hover{
-                        color: $Harry;
-                    }
-
-                    span {
-                        position: absolute;
-                        top: 56%;
-                        left: 88%;
                     }
                 }
             }
-            
-            p {
-                text-align: end;
-                color: $Harry;
+
+            &--check {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding-bottom: 1.5rem;
+                .checkbox {
+                    border: 1px solid $Voldemort;
+                }
+
+                span {
+                    padding-left: 1rem;
+                    p{
+                        color: $Harry;
+                    }
+                }
             }
         }
+
+        &-Pass {
+            text-align: right;
+            color: $Harry;
+            padding-bottom: 1.5rem;
+        }
+
+        button {
+            background-color: $Harry;
+            color: $Dobby;
+            border: 1px solid $Harry;
+            border-radius: 5px;
+            padding: 1rem;
+
+            a {
+                text-decoration: none;
+                color: $Dobby;
+            }
+        }
+
+        &-RRSS {
+            p {
+                text-align: center;
+                color: $Hermione;
+                padding: 1rem;
+            }
+
+            &-icon {
+                display: flex;
+                justify-content: center;
+                div {
+                    width: 55px;
+                    height: 55px;
+                    border-radius: 50%;
+                    background-color: $Neville;
+                    padding: .5rem;
+                    margin: 1rem;
+                    text-align: center;
+
+                    a {
+
+                        img {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        &-Singup {
+            padding-top: 1rem;
+            color: $Harry;
+            text-align: center;
+            a {
+                text-decoration: none;
+                color: $Hermione;
+            }
+
+            a:hover {
+                font-weight: $medium;
+            }
+        
+        }
+        
+    }
+}
+
+@mixin desktop-non-visible {
+    .desktop {
+        display: none;
+    }
+}
+
+@mixin mobile-view {
+    .desktop {
+        display: none;
     }
 }

@@ -15,7 +15,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap" rel="stylesheet">
         
-        <!--Style / Animate CSS / Bootstrap-->
+        <!--Style-->
         <link rel="stylesheet" type="text/css" href="css/main.css">
 
         <!--Javascript-->
@@ -24,47 +24,54 @@
     <body>
         <main class="grid">
             <section class="leftSide">
-                <div>
-                    <img src="assets/img/logo/logo.svg" alt="Be Positive Logo">
-                </div>
-                <div>
-                    <h1>Gestiona tus seguidores de forma segura</h1>
-                    <img src="assets/img/logo/smiling.svg"
+                <div class="leftSide-Info">
+                    <div class="leftSide-Info--logo">
+                        <img src="assets/img/logo/logo.svg" alt="Be Positive Logo">
+                    </div>
+                    <div class="leftSide-Info--text">
+                        <h1>Gestiona tus seguidores de forma segura</h1>
+                        <img src="assets/img/logo/smiling.svg"
+                    </div>
                 </div>
             </section>
             <section class="rightSide">
-                <div>
-                    <h3>Bienvenido</h3>
-                    <p>Inicia sesión ingresando su cuenta aquí</p>
+                <div clas="login">
+                    <div class="login-Text">
+                        <h3>Bienvenido</h3>
+                        <p>Inicia sesión ingresando su cuenta aquí</p>
+                    </div>
 
-                    <form name=" "  method="post" enctype="multipart/form-data">
-                        <div>
+                    <form name=" "  method="post" enctype="multipart/form-data" class="login-Form">
+                        <div class="login-Form--inputs">
                             <label>Email/Nombre de usuario</label>
                             <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Ingresa email o nombre de usuario">
                         </div>
-                        <div>
+                        <div class="login-Form--inputs">
                             <label>Contraseña</label>
                             <input type="password" placeholder="Ingresa contraseña">  
+                            <span><img src="assets/img/icon/view-pass.svg"></span>
                         </div>
                     </form>
                     <p>¿Olvidaste tu contraseña</p>
-                    <button type="button">Iniciar sesión</button>
-                    <div>
+                    <button type="button" >Iniciar sesión</button>
+                    <div class="login-RRSS">
                         <p>¿O inicia sesión con otra cuenta</p>
-                        <div>
-                            <a>
-                                <img src="assets/img/rrss/apple.svg" alt="Apple Account"></img>
-                            </a>
-                        </div>
-                        <div>
-                            <a>
-                                <img src="assets/img/rrss/facebook.svg" alt="Facebook Account"></img>
-                            </a>
-                        </div>
-                        <div>
-                            <a>
-                                <img src="assets/img/rrss/google.svg" alt="Google Account"></img>
-                            </a>
+                        <div class="login-RRSS-icon">
+                            <div>
+                                <a>
+                                    <img src="assets/img/rrss/apple.svg" alt="Apple Account"></img>
+                                </a>
+                            </div>
+                            <div class="login-RRSS-icon">
+                                <a>
+                                    <img src="assets/img/rrss/facebook.svg" alt="Facebook Account"></img>
+                                </a>
+                            </div>
+                            <div class="login-RRSS-icon">
+                                <a>
+                                    <img src="assets/img/rrss/google.svg" alt="Google Account"></img>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <p>¿Eres un nuevo usuario?

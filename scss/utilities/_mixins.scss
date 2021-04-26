@@ -5,3 +5,104 @@
     }
 }
 
+@mixin mobile-grid {
+    .grid {
+        display: block;
+    }
+}
+
+@mixin desktop-leftSide{
+    .leftSide {
+        background-color: $Luna;
+        height: 100%vw;
+
+        &-Info {
+            display: flex;
+            flex-direction: column;
+            color: $Harry;
+            font-size: $small;
+            font-weight: $light;
+            padding: 5rem 15rem 30rem 5rem;
+
+            &--logo {
+                width: 220px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            &--text {
+                display: flex;
+                flex-direction: column;
+                padding: 2rem 0 0 .5rem;
+                
+                img {
+                    align-self: flex-end;
+                    width: 100px;
+                }
+            }
+        }
+    }
+}
+
+@mixin desktop-rightSide {
+    .rightSide {
+        .login {
+            position: relative;
+            top: 20%;
+            left: 30%;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            &-Text {
+                color: $Hermione;
+                
+                h3 {
+                    font-size: $small;
+                }
+
+                p {
+                    padding: 1rem 0 2rem 0;
+                }
+
+            }
+
+            &-Form {
+                display: flex;
+                flex-direction: column;
+                &--inputs {
+                    display: flex;
+                    flex-direction: column;
+                    padding-bottom: 2rem;
+
+                    label {
+                        color: $Harry;
+                        padding-bottom: 1rem;
+                    }
+                    input {
+                        padding: 1rem 0 1.5rem 1rem;
+                        width: auto;
+                        border: 1px solid $Voldemort;
+                        border-radius: 5px;
+                    }
+
+                    input:hover{
+                        color: $Harry;
+                    }
+
+                    span {
+                        position: absolute;
+                        top: 56%;
+                        left: 88%;
+                    }
+                }
+            }
+            
+            p {
+                text-align: end;
+                color: $Harry;
+            }
+        }
+    }
+}

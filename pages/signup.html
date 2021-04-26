@@ -22,22 +22,25 @@
         <script defer src="../js/script.js"></script>
     </head>
     <body>
-        <main>
+        <main class="grid">
             <section class="leftSide">
-                <div>
-                    <img src="../assets/img/logo/logo.svg" alt="Be Positive Logo">
-                </div>
-                <div>
-                    <h1>Gestiona tus seguidores de forma segura</h1>
-                    <img src="../assets/img/logo/smiling.svg"
+                <div class="leftSide-Info">
+                    <div class="leftSide-Info--logo">
+                        <img src="../assets/img/logo/logo.svg" alt="Be Positive Logo">
+                    </div>
+                    <div class="leftSide-Info--text">
+                        <h1>Gestiona tus seguidores de forma segura</h1>
+                        <img src="../assets/img/logo/smiling.svg"
+                    </div>
                 </div>
             </section>
             <section class="rightSide">
-                <div>
-                    <h3>Bienvenido</h3>
-                    <p>Inicia sesión ingresando su cuenta aquí</p>
+                <div clas="login">
+                    <div class="login-Text">
+                        <h3>Registrase en be positive</h3>
+                    </div>
 
-                    <form name=""  method="post" enctype="multipart/form-data">
+                    <form name=" "  method="post" enctype="multipart/form-data" class="login-Form">
                         <div>
                             <label>Email/Nombre de usuario</label>
                             <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Ingresa email o nombre de usuario">
@@ -45,31 +48,38 @@
                         <div>
                             <label>Contraseña</label>
                             <input type="password" placeholder="Ingresa contraseña">  
+                            <img src="../assets/img/icon/view-pass.svg">
                         </div>
                     </form>
-                    <p>¿Olvidaste tu contraseña</p>
-                    <button type="button">Iniciar sesión</button>
                     <div>
-                        <p>¿O inicia sesión con otra cuenta</p>
-                        <div>
-                            <a>
-                                <img src="../assets/img/rrss/apple.svg" alt="Apple Account"></img>
-                            </a>
-                        </div>
-                        <div>
-                            <a>
-                                <img src="../assets/img/rrss/facebook.svg" alt="Facebook Account"></img>
-                            </a>
-                        </div>
-                        <div>
-                            <a>
-                                <img src="../assets/img/rrss/google.svg" alt="Google Account"></img>
-                            </a>
+                        <input type="checkbox">
+                        <p>Aceptar términos y condiciones</p>
+                    </div>
+                    <p>¿Olvidaste tu contraseña</p>
+                    <button type="button" >Iniciar sesión</button>
+                    <div class="login-RRSS">
+                        <p>O registrarse con otra cuenta</p>
+                        <div class="login-Form--rrss">
+                            <div>
+                                <a>
+                                    <img src="../assets/img/rrss/apple.svg" alt="Apple Account"></img>
+                                </a>
+                            </div>
+                            <div>
+                                <a>
+                                    <img src="../assets/img/rrss/facebook.svg" alt="Facebook Account"></img>
+                                </a>
+                            </div>
+                            <div>
+                                <a>
+                                    <img src="../assets/img/rrss/google.svg" alt="Google Account"></img>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <p>¿Eres un nuevo usuario?
+                    <p>¿Ya eres un nuevo usuario?
                         <span>
-                            <a href="../pages/signup.html">Crear una cuenta nueva</a>
+                            <a href="../index.html">Ingresar</a>
                         </span>
                     </p>
                 </div>

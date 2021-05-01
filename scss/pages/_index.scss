@@ -1,0 +1,8 @@
+@media (max-width: 575.98px){
+    @include mobile-home;
+}
+
+@media (min-width: 992px) { 
+    @include desktop-leftSide;
+    @include desktop-rightSide-home;
+}

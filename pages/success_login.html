@@ -38,47 +38,81 @@
             </section>
             <section class="rightSide">
                 <div class="login">
-                    <div class="login-Text">
+                    <div class="login--Text">
                         <h3>Bienvenido</h3>
-                        <p class="login-Text--orange">Inicia sesión ingresando su cuenta aquí</p>
+                        <p class="login--Text-orange">Inicia sesión ingresando su cuenta aquí</p>
                     </div>
 
-                    <form name=" "  method="post" enctype="multipart/form-data" class="login-Form">
-                        <div class="login-Form--inputs">
+                    <div class="login--Mobile">
+                        <div class="login--Mobile-Back">
+                            <img src="../assets/img/icon/chevron-left.svg" alt="Get Back">
+                        </div>
+                        <div class="login--Mobile-Logo">
+                            <img src="../assets/img/logo/logo.svg" alt="Be Positive Logo">
+                        </div>
+                        <div class="login--Mobile-Text">
+                            <h4>Inicia sesión para utilizar la aplicación</h4>
+                        </div>
+                    </div>
+
+                    <form name=" "  method="post" enctype="multipart/form-data" class="rightSide-login--Form">
+                        <div class="login--Form-inputs">
                             <label>Email/Nombre de usuario</label>
                             <input type="text" id="mail" placeholder="Ingresa email o nombre de usuario">
                         </div>
-                        <div class="login-Form--inputs">
+                        <div class="login--Form-inputs">
                             <label>Contraseña</label>
                             <input type="password" id ="password" placeholder="Ingresa contraseña">  
                             <span class="viwePass"><img src="../assets/img/icon/view-pass.svg"></span>
                         </div>
                     </form>
-                    <p class="login-Pass">¿Olvidaste tu contraseña</p>
-                    <button type="button" >Iniciar sesión</button>
-                    <div class="login-RRSS">
-                        <p>O inicia sesión con otra cuenta</p>
-                        <div class="login-RRSS-icon">
+                    <p class="login--Pass">¿Olvidaste tu contraseña?</p>
+                    <button type="button" class="login--Pass-Session">
+                        <a href="../pages/success_login.html">Iniciar sesión</a>
+                    </button>
+                    <button type="button" class="login--AccRRSS">
+                        <p>Inicia sesión con otra cuenta</p>
+                    </button>
+                </div>
+                <div class="loginRRSS">
+                    <div class="loginRRSS-Back"></div>
+                    <div class="loginRRSS-Info">
+                        <div class="loginRRSS-Info--mobileMenu">
+                            <img src="../assets/img/icon/singup-line.svg" alt="menu">
+                        </div>
+                        <div class="loginRRSS-Info--mobile">
+                            <div>
+                                <img src="../assets/img/icon/cancel.svg" alt="cancel">
+                            </div>
+                            <p>Selecciona tu cuenta</p>
+                        </div>
+                        <p class="loginRRSS-Info--desk">O registrarse con otra cuenta</p>
+                        <div class="loginRRSS-Info--icon">
                             <div>
                                 <a href="https://appleid.apple.com/">
-                                    <img src="../assets/img/rrss/apple.svg" alt="Apple Account"></img>
+                                    <img src="../assets/img/rrss/apple.svg" alt="Apple Account">
+                                    <p>Continua con Apple ID</p>
                                 </a>
                             </div>
                             <div>
                                 <a href="https://es-la.facebook.com">
-                                    <img src="../assets/img/rrss/facebook.svg" alt="Facebook Account"></img>
+                                    <img src="../assets/img/rrss/facebook.svg" alt="Facebook Account">
+                                    <p>Continua con Facebook</p>
                                 </a>
                             </div>
-                            <div >
+                            <div>
                                 <a href="https://www.google.com/account/about/">
-                                    <img src="../assets/img/rrss/google.svg" alt="Google Account"></img>
+                                    <img src="../assets/img/rrss/google.svg" alt="Google Account">
+                                    <p>Continua con Google</p>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <p class="login-Singup">¿Eres un nuevo usuario?
+                </div>
+                <div class="loginRegister">
+                    <p>¿Eres un nuevo usuario?
                         <span>
-                            <a href="../index.html">Crear una cuenta nueva</a>
+                            <a href="../pages/signup.html">Crear una cuenta nueva</a>
                         </span>
                     </p>
                 </div>

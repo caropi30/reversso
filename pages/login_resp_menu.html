@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Reversso Prueba HTML/CSS</title>
+        <meta name="author" content="Carolina Pirela">
+        <meta name="copyright" content="Propietaria Carolina Pirela" />
+        <meta name="description" content="Prueba HTML/CSS Reversso">
+        <meta name="keywords" content="prueb, Prueba, test, Test, html, HTML, css, CSS, Cascade Stylesheet">
+        <meta name="generator" content="prestashop">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!--Font-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap" rel="stylesheet">
+        
+        <!--Style-->
+        <link rel="stylesheet" type="text/css" href="../css/main.css">
+
+        <!--Javascript-->
+        <script defer src="../js/script.js"></script>
+    </head>
+    <body>
+        <main class="grid">
+            <section class="leftSide">
+                <div class="leftSide-Info">
+                    <div class="leftSide-Info--logo">
+                        <img src="../assets/img/logo/logo.svg" alt="Be Positive Logo">
+                    </div>
+                    <div class="leftSide-Info--text">
+                        <h1>Gestiona tus seguidores de forma segura</h1>
+                        <div class="smiling">
+                            <img src="../assets/img/logo/smiling.svg">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="rightSide">
+                    <div class="login">
+                        <div class="login--Text">
+                            <h3>Bienvenido</h3>
+                            <p class="login--Text-orange">Inicia sesión ingresando su cuenta aquí</p>
+                        </div>
+
+                        <div class="login--Mobile">
+                            <div class="login--Mobile-Back">
+                                <img src="../assets/img/icon/chevron-left.svg" alt="Get Back">
+                            </div>
+                            <div class="login--Mobile-Logo">
+                                <img src="../assets/img/logo/logo.svg" alt="Be Positive Logo">
+                            </div>
+                            <div class="login--Mobile-Text">
+                                <h4>Inicia sesión para utilizar la aplicación</h4>
+                            </div>
+                        </div>
+    
+                        <form name=" "  method="post" enctype="multipart/form-data" class="rightSide-login--Form">
+                            <div class="login--Form-inputs">
+                                <label>Email/Nombre de usuario</label>
+                                <input type="text" id="mail" placeholder="Ingresa email o nombre de usuario">
+                            </div>
+                            <div class="login--Form-inputs">
+                                <label>Contraseña</label>
+                                <input type="password" id ="password" placeholder="Ingresa contraseña">  
+                                <span class="viwePass"><img src="../assets/img/icon/view-pass.svg"></span>
+                            </div>
+                        </form>
+                        <p class="login--Pass">¿Olvidaste tu contraseña?</p>
+                        <button type="button" class="login--Pass-Session">
+                            <a href="../pages/success_login.html">Iniciar sesión</a>
+                        </button>
+                        <button type="button" class="login--AccRRSS">
+                            <p>Inicia sesión con otra cuenta</p>
+                        </button>
+                    </div>
+                    <div class="loginRRSS">
+                        <div class="loginRRSS-Back"></div>
+                        <div class="loginRRSS-Info">
+                            <p class="loginRRSS-Info--desk">O registrarse con otra cuenta</p>
+                            <div class="loginRRSS-Info--icon">
+                                <div>
+                                    <a href="https://appleid.apple.com/">
+                                        <img src="../assets/img/rrss/apple.svg" alt="Apple Account">
+                                        <p>Continua con Apple ID</p>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="https://es-la.facebook.com">
+                                        <img src="../assets/img/rrss/facebook.svg" alt="Facebook Account">
+                                        <p>Continua con Facebook</p>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="https://www.google.com/account/about/">
+                                        <img src="../assets/img/rrss/google.svg" alt="Google Account">
+                                        <p>Continua con Google</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="loginRegister">
+                        <p>¿Eres un nuevo usuario?
+                            <span>
+                                <a href="../pages/signup.html">Crear una cuenta nueva</a>
+                            </span>
+                        </p>
+                    </div>
+            </section>
+        </main>
+    </body>
+</html>

@@ -1,4 +1,5 @@
 
 @media (min-width: 992px) { 
-    @include desktop-grid;
+    @include desktop-grid-home;
+    @include desktop-grid-singUp;
 }

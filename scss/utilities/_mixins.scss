@@ -1,4 +1,4 @@
-@mixin desktop-grid {
+@mixin desktop-grid-home {
     .grid{
         display: grid;
         grid-template-columns: repeat(2, 50%);
@@ -19,9 +19,21 @@
     }
 }
 
-@mixin mobile-grid {
+@mixin desktop-grid-singUp {
+    .singUp-Grid {
+        @extend .grid;
+    }
+}
+
+@mixin mobile-grid-home {
     .grid {
-        display: block;
+        background-color: $Luna;
+    }
+}
+
+@mixin mobile-grid-singUp {
+    .singUp-Grid {
+        background-color: $Dobby;
     }
 }
 
@@ -34,9 +46,7 @@
             display: flex;
             flex-direction: column;
             color: $Harry;
-            font-size: $small;
-            font-weight: $light;
-            padding: 5rem 15rem 0 5rem;
+            padding: 5rem 13rem 0 5rem;
 
             &--logo {
                 width: 220px;
@@ -52,6 +62,58 @@
                 padding: 2rem 0 0 .5rem;
                 position: relative;
 
+                h1 {
+                    font-size: $small;
+                }
+
+                .smiling {
+                    position: absolute;
+                    top: 80%;
+                    left: 66%;
+                    width: 120px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        &-Mobile {
+            display: none;
+        }
+    }
+}
+
+@mixin desktop-leftSide-singUp {
+    .leftSideSingUp {
+        background-color: $Luna;
+        min-height: 100vw; 
+
+        &-Info {
+            display: flex;
+            flex-direction: column;
+            color: $Harry;
+            padding: 5rem 13rem 0 5rem;
+
+            &--logo {
+                width: 220px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            &--text {
+                display: flex;
+                flex-direction: column;
+                padding: 2rem 0 0 .5rem;
+                position: relative;
+
+                h1 {
+                    font-size: $small;
+                }
+
                 .smiling {
                     position: absolute;
                     top: 80%;
@@ -65,40 +127,36 @@
             }
         }
     }
+
 }
 
-@mixin desktop-rightSide {
-    .login {
+@mixin desktop-rightSide-home {
+    .welcome {
         position: relative;
         top: 10%;
-        left: 30%;
+        left: 25%;
         width: 400px;
         display: flex;
         flex-direction: column;
-        height: 100vw;
-
-        &-Text {
+        
+        &--Text {
             color: $Hermione;
             
             h3 {
                 font-size: $small;
             }
 
-            h4 {
-                font-size: 1.5rem;
-                padding-bottom: 1.5rem;
-            }
-
-            &--orange {
+            p {
                 padding: 1rem 0 2rem 0;
             }
 
         }
 
-        &-Form {
+        &--Form {
             display: flex;
             flex-direction: column;
-            &--inputs {
+
+            &-inputs {
                 display: flex;
                 flex-direction: column;
                 padding-bottom: 1.5rem;
@@ -129,32 +187,15 @@
                     }
                 }
             }
-
-            &--check {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                padding-bottom: 1.5rem;
-                .checkbox {
-                    border: 1px solid $Voldemort;
-                }
-
-                span {
-                    padding-left: 1rem;
-                    p{
-                        color: $Harry;
-                    }
-                }
-            }
         }
 
-        &-Pass {
+        &--Pass {
             text-align: right;
             color: $Harry;
             padding-bottom: 1.5rem;
         }
 
-        button {
+        &--Session  {
             background-color: $Harry;
             color: $Dobby;
             border: 1px solid $Harry;
@@ -165,9 +206,10 @@
                 text-decoration: none;
                 color: $Dobby;
             }
+            
         }
 
-        &-RRSS {
+        &--RRSS {
             p {
                 text-align: center;
                 color: $Hermione;
@@ -197,7 +239,7 @@
 
         }
 
-        &-Singup {
+        &--Singup {
             padding-top: 1rem;
             color: $Harry;
             text-align: center;
@@ -212,17 +254,673 @@
         
         }
         
-    }
+    }            
+        
 }
 
-@mixin desktop-non-visible {
-    .desktop {
+@mixin mobile-home {
+    .leftSide {
+        background-color: $Luna;
+        min-height: 100vw;
+        width: 100%;
+
+        &-Info {
+            display: none;
+        }
+
+        &-Mobile {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            margin: 0 3rem;
+            padding: 15rem 0 5rem 0 ;
+
+            &--Logo {
+                margin-bottom: 4rem;
+                img {
+                    width: 100%;
+                }
+            }
+
+            &--Txt {
+                color: $Hermione;
+
+                h3 {
+                    font-weight: $regular;
+                }
+
+                p {
+                    font-weight: $bold;
+                    font-size: $medium-small;
+                }
+            }
+
+            &--Session {
+                background-color: $Harry;
+                color: $Dobby;
+                border: 1px solid $Harry;
+                border-radius: 5px;
+                padding: 1rem;
+                margin: 2rem 0 1rem 0;
+    
+                a {
+                    text-decoration: none;
+                    color: $Dobby;
+                } 
+            }
+
+            &--Acc {
+                background-color: transparent;
+                color: $Hermione;
+                border: 1px solid $Hermione;
+                border-radius: 5px;
+                padding: 1rem;
+                margin-bottom: 2rem;
+
+                a {
+                    text-decoration: none;
+                    color: $Hermione;
+                }
+            }
+
+            &--RRSS {
+                display: none;
+            }
+
+            &--Singup {
+                padding-top: 1rem;
+                color: $Harry;
+                text-align: center;
+                font-size: $xx-small;
+                a {
+                    text-decoration: none;
+                    color: $Hermione;
+                }
+            }
+        }
+    }
+    .rightSide {
         display: none;
     }
 }
 
-@mixin mobile-view {
-    .desktop {
+@mixin desktop-rightSide-singUp {
+    .singUp {
+        position: relative;
+        top: 10%;
+        left: 20%;
+        width: 470px;
+        display: flex;
+        flex-direction: column;
+
+        &--Back, &--Logo {
+            display: none; 
+        }
+
+        &--Text {
+            color: $Hermione;
+            
+            h4 {
+                font-size: $medium-small;
+                margin-bottom: 2rem;
+            }
+
+            p {
+                padding: 1rem 0 2rem 0;
+            }
+
+        }
+
+        &--Form {
+            display: flex;
+            flex-direction: column;
+
+            &-inputs {
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 1.5rem;
+                position: relative;
+
+                label {
+                    color: $Harry;
+                    padding-bottom: 1rem;
+                }
+                input {
+                    padding: 1rem 0 1.2rem 1rem;
+                    width: auto;
+                    border: 1px solid $Voldemort;
+                    border-radius: 5px;
+                }
+
+                input:hover{
+                    color: $Harry;
+                }
+
+                span {
+                    position: absolute;
+                    top: 43%;
+                    left: 88%;
+
+                    img:hover {
+                        color: $Harry;
+                    }
+                }
+            }
+        }
+
+        &--Check {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 2rem;
+
+            .checkbox {
+                width: 25px;
+                height: 25px;
+                border-radius: 3px;
+                border: .5px solid $Voldemort;
+                input {
+                    -webkit-appearance: none;
+                }
+            }
+
+            span {
+                padding: 1rem;
+                color: $Hermione;
+            }
+        }
+
+        &--Pass {
+            text-align: right;
+            color: $Harry;
+            padding-bottom: 1.5rem;
+        }
+
+        &--Acc  {
+            background-color: $Harry;
+            color: $Dobby;
+            border: 1px solid $Harry;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+
+            a {
+                text-decoration: none;
+                color: $Dobby;
+            }
+            
+        }
+
+        &--AccRRSS {
+            display: none;
+        }
+    } 
+
+    .singUpRRSS {
+        position: relative;
+        left: 3%;
+        padding-top: 10rem;
+
+        &-Back {
+            display: none;
+        }
+
+        &-Info {
+            &--mobileMenu, &--mobile{
+                display: none;
+            }
+
+            &--desk { 
+                text-align: center;
+                color: $Hermione;
+                padding: 1rem;
+            }
+
+            &--icon {
+                display: flex;
+                justify-content: center;
+                div {
+                    width: 55px;
+                    height: 55px;
+                    border-radius: 50%;
+                    background-color: $Neville;
+                    padding: .5rem;
+                    margin: 1rem;
+                    text-align: center;
+    
+                    a {
+    
+                        img {
+                            width: 50%;
+                        }
+
+                        p {
+                            display: none;
+                        }
+                    }
+
+                }
+            }
+        }
+
+
+        &-btn {
+            display: none;
+            width: 100%;
+        }
+
+    }
+
+    .singUpRegister {
+        position: relative;
+        left: 3%;
+        padding-top: 2rem;
+        color: $Harry;
+        text-align: center;
+        a {
+            text-decoration: none;
+            color: $Hermione;
+        }
+
+        a:hover {
+            font-weight: $medium;
+        }
+    
+    }
+    
+}
+
+@mixin mobile-singUp {
+    .leftSideSingUp {
         display: none;
     }
+
+    .rightSideSingUp {
+        .singUp {
+            position: relative;
+            left: 10%;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            padding-top: 3rem;
+            z-index: 1;
+            &--Back {
+                width: 25px;
+                img {
+                    width: 100%;
+                }
+            } 
+
+            &--Logo {
+                align-self: center;
+                margin: 2rem 0;
+            }
+            
+            &--Text {
+                color: $Hermione;
+                
+                h4 {
+                    font-size: $medium-small;
+                    margin-bottom: 2rem;
+                }
+
+                p {
+                    padding: 1rem 0 2rem 0;
+                }
+
+            }
+
+            &--Form {
+                display: flex;
+                flex-direction: column;
+
+                &-inputs {
+                    display: flex;
+                    flex-direction: column;
+                    padding-bottom: 1.5rem;
+                    position: relative;
+
+                    label {
+                        color: $Harry;
+                        padding-bottom: 1rem;
+                    }
+                    input {
+                        padding: 1rem 0 1.2rem 1rem;
+                        width: auto;
+                        border: 1px solid $Voldemort;
+                        border-radius: 5px;
+                    }
+
+                    input:hover{
+                        color: $Harry;
+                    }
+
+                    span {
+                        position: absolute;
+                        top: 43%;
+                        left: 88%;
+                    }
+                }
+            }
+
+            &--Pass {
+                text-align: right;
+                color: $Harry;
+                padding-bottom: 1.5rem;
+            }
+
+            &--Check {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-bottom: 2rem;
+    
+                .checkbox {
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 3px;
+                    border: .5px solid $Voldemort;
+                    input {
+                        -webkit-appearance: none;
+                    }
+                }
+    
+                span {
+                    padding: 1rem;
+                    color: $Hermione;
+                }
+            }
+
+            &--Acc  {
+                background-color: $Hermione;
+                color: $Dobby;
+                border: 1px solid $Hermione;
+                border-radius: 5px;
+                padding: 1rem;
+                margin-bottom: 1.5rem;
+                width: 100%;
+    
+                a {
+                    text-decoration: none;
+                    color: $Dobby;
+                }
+                
+            }
+
+            &--AccRRSS  {
+                background-color: transparent;
+                color: $Harry;
+                border: 1px solid $Harry;
+                border-radius: 5px;
+                padding: 1rem;
+                margin-bottom: 1.5rem;
+                width: 100%;
+    
+                a {
+                    text-decoration: none;
+                }
+                
+            }
+        }
+
+        .singUpRRSS {
+            background: $Bellatrix;
+            width: 100%;
+            position: absolute;
+            top: 0%;
+            z-index: 2;
+
+            &-Back {
+                width: 100%;
+                height: 100vw;
+                background-color: $Bellatrix;
+            }
+
+            &-Info {
+                display: flex;
+                flex-direction: column;
+                width: 85%;
+                border-radius: 20px 20px 0 0;
+                padding: 3rem 2rem;
+                background-color: #fff;
+                z-index: 3;
+
+                &--mobileMenu {
+                    width: 80px;
+                    margin-bottom: 1.5rem;
+                    align-self: center;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                &--mobile {
+                    display: flex;
+                    color: $Harry;
+                    justify-content: space-evenly;
+                    margin-bottom: 2rem;
+                    div {
+                        width: 25px;
+                        margin-right: .5rem;
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    p {
+                        font-size: $medium-small;
+                        font-weight: $bold;
+                    }
+
+                }
+
+                &--desk {
+                    display: none;
+                }
+
+                &--icon {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    div {
+                        width: 100%;
+                        min-height: 55px;
+                        text-align: center;
+                        border: 1px solid $Harry;
+                        margin-bottom: 1rem;
+
+                        a {
+                            display: flex;
+                            justify-content: center;
+                            text-decoration: none;
+
+                            img {
+                                width: 10%;
+                            }
+
+                            p {
+                                align-self: center;
+                                padding-left: 1rem;
+                                font-size: $extra-small;
+                                color: $Harry;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .singUpRegister {
+            padding-top: 1rem;
+            color: $Harry;
+            text-align: center;
+            a {
+                text-decoration: none;
+                color: $Hermione;
+            }
+        
+        }
+    
+    }            
 }
+
+@mixin desktop-rightSide-login {
+    .login {
+        position: relative;
+        top: 10%;
+        left: 25%;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        
+        &--Text {
+            color: $Hermione;
+            
+            h3 {
+                font-size: $small;
+            }
+
+            p {
+                padding: 1rem 0 2rem 0;
+            }
+
+        }
+
+        &--Mobile {
+            display: none;
+        }
+
+        &--Form {
+            display: flex;
+            flex-direction: column;
+
+            &-inputs {
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 1.5rem;
+                position: relative;
+
+                label {
+                    color: $Harry;
+                    padding-bottom: 1rem;
+                }
+                input {
+                    padding: 1rem 0 1.2rem 1rem;
+                    width: auto;
+                    border: 1px solid $Voldemort;
+                    border-radius: 5px;
+                }
+
+                input:hover{
+                    color: $Harry;
+                }
+
+                span {
+                    position: absolute;
+                    top: 43%;
+                    left: 88%;
+
+                    img:hover {
+                        color: $Harry;
+                    }
+                }
+            }
+        }
+
+        &--Pass {
+            text-align: right;
+            color: $Harry;
+            padding-bottom: 1.5rem;
+            &-Session  {
+                background-color: $Harry;
+                color: $Dobby;
+                border: 1px solid $Harry;
+                border-radius: 5px;
+                padding: 1rem;
+    
+                a {
+                    text-decoration: none;
+                    color: $Dobby;
+                }
+                
+            }
+        }
+
+        &--AccRRSS {
+            display: none;
+        }
+        
+    } 
+
+    .loginRRSS {
+        margin-top: 10rem;
+        position: relative;
+        left: 2%;
+
+        &-Back {
+            display: none;
+        }
+
+        &-Info {
+            &--mobileMenu, &--mobile {
+                display: none;
+            }
+
+            p {
+                text-align: center;
+                color: $Hermione;
+                padding: 1rem;
+            }
+    
+            &--icon {
+                display: flex;
+                justify-content: center;
+                div {
+                    width: 55px;
+                    height: 55px;
+                    border-radius: 50%;
+                    background-color: $Neville;
+                    padding: .5rem;
+                    margin: 1rem;
+                    text-align: center;
+    
+                    a {
+    
+                        img {
+                            width: 50%;
+                        }
+
+                        p {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        
+
+    }     
+    
+    .loginRegister {
+        position: relative;
+        left: 2%;
+        padding-top: 1rem;
+        color: $Harry;
+        text-align: center;
+        a {
+            text-decoration: none;
+            color: $Hermione;
+        }
+
+        a:hover {
+            font-weight: $medium;
+        }
+    
+    }
+}
+

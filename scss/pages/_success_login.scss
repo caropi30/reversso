@@ -1,9 +1,11 @@
-@media (max-width: 475.98px) {
-    @include mobile-singUp;
+@media (max-width: 475px) {
+    //@include mobile-grid-login;
+    @include mobile-login;
 }
 
 
 @media (min-width: 1440px) { 
+    @include desktop-grid-login;
     @include desktop-leftSide-singUp;
     @include desktop-rightSide-singUp;
 
